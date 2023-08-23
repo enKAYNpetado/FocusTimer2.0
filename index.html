@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus timer 2.0</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./src/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=DM+Sans:opsz@9..40&family=Dancing+Script&family=Dosis:wght@700&family=Epilogue:wght@400;700;800&family=Inter:wght@400;700&family=JetBrains+Mono:wght@500;700&family=Montserrat:wght@600&family=Mulish:wght@400;600;700;900&family=Poppins&family=Roboto:wght@400;700&family=Source+Serif+4:wght@400;500;700&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="control-panel">
+        <section id="timer" class="flex">
+          <span id="minutes">25</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+        <section id="controls" class="flex">
+          <button data-action="toggleRunning" class="ph ph-play-circle">
+            <span class="sr-only">Iniciar contador</span>
+          </button>
+          <button data-action="toggleRunning" class="ph ph-pause-circle">
+            <span class="sr-only">Pausar contador</span>
+          </button>
+          <button data-action="reset" class="ph ph-stop-circle secondary">
+            <span class="sr-only">Reiniciar contador</span>
+          </button>
+          <button data-action="addTime" class="ph ph-plus-circle">
+            <span class="sr-only">Adicionar 5 minutos</span>
+          </button>
+          <button data-action="removeTime" class="ph ph-minus-circle">
+            <span class="sr-only">Retirar 5 minutos</span>
+          </button>
+        </section>
+      </div>
+      <section class="cards">
+        <button class="card">
+          <img
+            class="white"
+            src="./assets/threewhite.svg"
+            alt="ícone de uma árvore"
+          />
+          <img
+            class="black"
+            src="./assets/three.svg"
+            alt="ícone de uma árvore"
+          />
+        </button>
+        <button class="card1">
+          <img
+            class="white1"
+            src="./assets/iconwhite.svg"
+            alt="ícone de uma nuvem com chuva"
+          />
+          <img
+            class="black1"
+            src="./assets/icon.svg"
+            alt="ícone de uma nuvem com chuva"
+          />
+        </button>
+        <button class="card2">
+          <img
+            class="white2"
+            src="./assets/tentwhite.svg"
+            alt="ícone de uma barraca de pipoca"
+          />
+          <img
+            class="black2"
+            src="./assets/tent.svg"
+            alt="ícone de uma barraca de pipoca"
+          />
+        </button>
+        <button class="card3">
+          <img
+            class="white3"
+            src="./assets/firewhite.svg"
+            alt="ícone de uma chama"
+          />
+          <img
+            class="black3"
+            src="./assets/fire.svg"
+            alt="ícone de uma chama"
+          />
+        </button>
+      </section>
+    </div>
+  </body>
+</html>
