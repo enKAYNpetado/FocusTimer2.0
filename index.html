@@ -16,6 +16,11 @@
   </head>
   <body>
     <div class="app">
+      <button id="toggle-mode">
+        <span class="sr-only">Ativar light mode</span>
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon secondary"></i>
+      </button>
       <div class="control-panel">
         <section id="timer" class="flex">
           <span id="minutes">25</span>
@@ -23,28 +28,30 @@
           <span id="seconds">00</span>
         </section>
         <section id="controls" class="flex">
-          <button data-action="toggleRunning" class="ph ph-play-circle">
+          <button data-action="toggleRunning" class="ph ph-play-circle secondary">
             <span class="sr-only">Iniciar contador</span>
           </button>
-          <button data-action="toggleRunning" class="ph ph-pause-circle">
+          <button data-action="toggleRunning" class="ph ph-pause-circle secondary">
             <span class="sr-only">Pausar contador</span>
           </button>
-          <button data-action="reset" class="ph ph-stop-circle secondary">
+          <button data-action="reset" class="ph ph-stop-circle secondary secondary">
             <span class="sr-only">Reiniciar contador</span>
           </button>
-          <button data-action="addTime" class="ph ph-plus-circle">
+          <button data-action="addTime" class="ph ph-plus-circle secondary">
             <span class="sr-only">Adicionar 5 minutos</span>
           </button>
-          <button data-action="removeTime" class="ph ph-minus-circle">
+          <button data-action="removeTime" class="ph ph-minus-circle secondary">
             <span class="sr-only">Retirar 5 minutos</span>
           </button>
         </section>
       </div>
       <section class="cards">
         <button class="card">
+         
           <img
             class="white"
             src="./assets/threewhite.svg"
+            
             alt="ícone de uma árvore"
           />
           <img

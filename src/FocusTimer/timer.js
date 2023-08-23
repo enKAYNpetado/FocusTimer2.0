@@ -21,8 +21,6 @@ export function countdown() {
     reset()
     return
   }
-
-
   
   
   updateDisplay(minutes, seconds)

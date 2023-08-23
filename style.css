@@ -6,6 +6,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --hue: 194;
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --text-color: hsl(240, 6%, 21%);
+  --bg-color: hsl(0, 0%, 100%);
+  --controls-bg-color: hsl(0, 0%, 100%);
+  --button-secondary: hsl(var(--hue), 0%, 0%);
+}
+
+html.dark {
+  --text-color: hsl(0, 0%, 100%);
+  --controls-bg-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 0%);
+  --button-secondary: hsl(var(--hue), 40%, 98%);
+}
+
+html.dark .ph-sun,
+html:not(.dark) .ph-moon {
+  display: none;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  font-size: 3.2rem;
+  line-height: 0;
+
+  color: var(--text-color);
+  background-color: transparent;
+  border: 0;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 6.4rem;
+}
+
 .sr-only {
   height: 1px;
   width: 1px;
@@ -18,15 +54,12 @@
   appearance: none;
 }
 
-:root {
-  font-size: clamp(40%, 1% + 2vw, 62.5%);
-}
-
 body {
   font-size: 1.6rem;
   display: grid;
   height: 100vh;
   place-content: center;
+  background-color: var(--bg-color);
 }
 
 .app {
@@ -38,7 +71,7 @@ body {
   font-size: 12.6rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #323238;
+  color: var(--text-color);
 }
 
 .control-panel {
@@ -51,9 +84,10 @@ body {
 #controls button {
   font-size: 6.3rem;
   border: none;
-  background-color: white;
+  background-color: var(--controls-bg-color);
   cursor: pointer;
   padding-right: 4rem;
+  padding-left: 0.6rem;
 }
 
 .cards {
@@ -66,22 +100,30 @@ body {
 .card1,
 .card2,
 .card3 {
-  padding: 4.8rem;
+  padding: 2.5rem;
   background-color: #e1e1e6;
   border-radius: 2.4rem;
   border: 0;
   cursor: pointer;
 }
 
-/*.card1 .white1  {
-  position: absolute;
-}*/
+.cards button {
+  transition: all 0.2s ease-in-out;
+}
+.cards button:hover {
+  background-color: greenyellow;
+  transform: scale(1.1);
+}
 
 .white,
 .white1,
 .white2,
 .white3 {
   display: none;
+}
+
+.secondary {
+  color: var(--button-secondary);
 }
 
 .running .ph-play-circle,
@@ -95,7 +137,7 @@ html:not(.running) .ph-stop-circle {
 .blue {
   background-color: rgba(2, 121, 157, 1);
   border-radius: 2.4rem;
-  padding: 4.8rem;
+  padding: 2.5rem;
   border: 0;
   cursor: pointer;
 }

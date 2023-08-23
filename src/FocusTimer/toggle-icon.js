@@ -39,6 +39,16 @@ buttonToggle.addEventListener("click", (event) => {
   }
 })
 
+/*buttonToggle1.addEventListener("mouseover", function () {
+  toggleColorIconWhite1.classList.remove("white1")
+  toggleColorIcon1.classList.add("white")
+})
+
+buttonToggle1.addEventListener("mouseout", function () {
+  toggleColorIconWhite1.classList.add("white1")
+  toggleColorIcon1.classList.remove("white")
+})*/
+
 buttonToggle1.addEventListener("click", (event1) => {
   buttonToggle.classList.remove("blue")
   buttonToggle2.classList.remove("blue")
@@ -113,3 +123,23 @@ buttonToggle3.addEventListener("click", (event3) => {
     toggleColorIconWhite3.classList.add("white3")
   }
 })
+
+/*
+buttonToggle.addEventListener("mouseover", function () {
+  toggleColorIconWhite.classList.remove("white")
+  toggleColorIcon.classList.add("white")
+})
+
+buttonToggle.addEventListener("mouseout", function () {
+  toggleColorIconWhite.classList.add("white")
+  toggleColorIcon.classList.remove("white")
+})
+buttonToggle.addEventListener("mouseover", function () {
+  toggleColorIconWhite.classList.remove("white")
+  toggleColorIcon.classList.add("white")
+})
+
+buttonToggle.addEventListener("mouseout", function () {
+  toggleColorIconWhite.classList.add("white")
+  toggleColorIcon.classList.remove("white")
+})*/
